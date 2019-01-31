@@ -8,13 +8,21 @@ Described here: [https://milesmcbain.xyz/a-fully-dockerised-ghost-blog/](https:/
 
 
 To run
-
 ```
 docker-compose up -d
 ```
 
 To Stop
-
 ```
 docker-compose down
+```
+
+To run locally
+```
+docker-compose -f docker-compose.local.yml up -d
+```
+
+To Stop
+```
+docker-compose -f docker-compose.local.yml down
 ```
