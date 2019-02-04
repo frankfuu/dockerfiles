@@ -7,8 +7,8 @@ services:
     environment:
       STORAGE_TYPE: redis
       STORAGE_HOST: hastebinredis
-      VIRTUAL_HOST: haste.frankfu.net, hastebin.frankfu.com.au 
-      LETSENCRYPT_HOST: haste.frankfu.net, hastebin.frankfu.com.au
+      VIRTUAL_HOST: hastebin.frankfu.com.au
+      LETSENCRYPT_HOST: hastebin.frankfu.com.au
       LETSENCRYPT_EMAIL: frankfu1122@gmail.com
 
   hastebinredis:
