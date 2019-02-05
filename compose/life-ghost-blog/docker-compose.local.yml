@@ -5,18 +5,20 @@ services:
   ghost:
     image: ghost:2-alpine
     restart: always
+    ports: 
+      - "2368:2368"
     environment:
       NODE_ENV: production
-      url: https://blog.frankfu.com.au
+      # url: https://life.frankfu.com.au
       mail__transport: SMTP
       mail__options__service: Mailgun
       mail__options__auth__user: <My Mailgun User>
       mail__options__auth__pass: <My Mailgun Password>
-      VIRTUAL_HOST: blog.frankfu.com.au
-      LETSENCRYPT_HOST: blog.frankfu.com.au
-      LETSENCRYPT_EMAIL: frankfu1122@gmail.com
+      # VIRTUAL_HOST: life.frankfu.com.au
+      # LETSENCRYPT_HOST: life.frankfu.com.au
+      # LETSENCRYPT_EMAIL: frankfu1122@gmail.com
     volumes:
-      - ~/data/ghost-blog:/var/lib/ghost/content
+      - ~/data/ghost:/var/lib/ghost/content
 
 networks:
   default:
