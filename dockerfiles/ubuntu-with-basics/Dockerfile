@@ -1,4 +1,4 @@
 FROM ubuntu:18.04
 
-RUN apt update && apt install \
-    git vim sudo curl tree -y
+RUN apt update 
+RUN apt install git vim sudo curl tree -y
