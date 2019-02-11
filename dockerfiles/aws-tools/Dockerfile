@@ -1,4 +1,5 @@
 # From https://github.com/sekka1/aws-cli-docker/blob/master/Dockerfile
+# CLI Reference https://docs.aws.amazon.com/cli/latest/index.html
 
 FROM alpine:3.6
 
