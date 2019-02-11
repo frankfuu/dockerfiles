@@ -16,6 +16,6 @@ docker run \
     -e AWS_ACCESS_KEY_ID=mykeyid \
     -e AWS_SECRET_ACCESS_KEY=mysecret \
     -e AWS_DEFAULT_REGION=myregion \
-    --name at1 --rm frankfuu/aws-tools:latest \
+    --name at1 --rm frankfuu/aws-tools:temp \
     aws cloudfront get-distribution-config --id E2VZ0IASAMPLE
 ```
