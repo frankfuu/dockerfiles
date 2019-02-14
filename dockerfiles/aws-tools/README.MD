@@ -10,7 +10,7 @@ To push
 docker push -t frankfuu/aws-tools:tag
 ```
 
-To run and get the distribution config for a cloudfront distribution
+To run a command e.g.  `get-distribution-config` on `cloudfront`
 ```
 docker run \
     -e AWS_ACCESS_KEY_ID=mykeyid \
@@ -20,8 +20,13 @@ docker run \
     aws cloudfront get-distribution-config --id E2VZ0IASAMPLE
 ```
 
-To run with an env file
+To run with an env file with a command
 ```
 docker run --env-file="$HOME/.creds/aws/default.env" \ 
 frankfuu/aws-tools:temp aws cloudfront get-distribution-config --id E2VZ0IASAMPLE
+```
+
+To run interactively
+```
+docker run --env-file="$HOME/.creds/aws/default.env" -it frankfuu/aws-tools:temp
 ```
