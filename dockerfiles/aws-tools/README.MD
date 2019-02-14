@@ -20,7 +20,7 @@ docker run \
     aws cloudfront get-distribution-config --id E2VZ0IASAMPLE
 ```
 
-To run with an env file with a command
+To run with an env file with the same command
 ```
 docker run --env-file="$HOME/.creds/aws/default.env" \ 
 frankfuu/aws-tools:temp aws cloudfront get-distribution-config --id E2VZ0IASAMPLE
