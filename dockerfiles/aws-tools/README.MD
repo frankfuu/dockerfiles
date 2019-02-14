@@ -16,6 +16,12 @@ docker run \
     -e AWS_ACCESS_KEY_ID=mykeyid \
     -e AWS_SECRET_ACCESS_KEY=mysecret \
     -e AWS_DEFAULT_REGION=myregion \
-    --name at1 --rm frankfuu/aws-tools:temp \
+    --rm frankfuu/aws-tools:temp \
     aws cloudfront get-distribution-config --id E2VZ0IASAMPLE
+```
+
+To run with an env file
+```
+docker run --env-file="$HOME/.creds/aws/default.env" \ 
+frankfuu/aws-tools:temp aws cloudfront get-distribution-config --id E2VZ0IASAMPLE
 ```
