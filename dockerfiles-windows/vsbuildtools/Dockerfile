@@ -1,6 +1,6 @@
 FROM microsoft/dotnet-framework:4.7.2-sdk-windowsservercore-ltsc2019
 
-ENV chocolateyUseWindowsCompression false
+# ENV chocolateyUseWindowsCompression false
 COPY installchoco.ps1 / 
 
 WORKDIR /
