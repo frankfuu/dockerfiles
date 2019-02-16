@@ -1,4 +1,6 @@
-FROM microsoft/dotnet-framework:4.7.2-sdk-windowsservercore-ltsc2016
+ARG LTSC_VERSION=ltsc2019
+
+FROM microsoft/dotnet-framework:4.7.2-sdk-windowsservercore-${LTSC_VERSION}
 
 # ENV chocolateyUseWindowsCompression false
 COPY installchoco.ps1 / 
