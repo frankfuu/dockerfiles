@@ -2,13 +2,14 @@ FROM microsoft/dotnet-framework:4.7.2-sdk-windowsservercore-ltsc2019
 
 ENV chocolateyUseWindowsCompression false
 
-RUN powershell -Command \
-    iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1')); \
-    choco feature disable --name showDownloadProgress
+RUN ping chocolatey.org
+# RUN powershell -Command \
+#     iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1')); \
+#     choco feature disable --name showDownloadProgress
 
-RUN choco feature enable -n allowGlobalConfirmation
-RUN choco install nodejs-lts
-RUN choco install yarn
+# RUN choco feature enable -n allowGlobalConfirmation
+# RUN choco install nodejs-lts
+# RUN choco install yarn
 
 # REFERENCES
 # https://docs.microsoft.com/en-us/visualstudio/install/build-tools-container?view=vs-2017
