@@ -10,6 +10,9 @@ RUN choco install nodejs-lts
 RUN choco install yarn
 RUN choco install git
 
+# Refresh path variables so we can use things like Nuget and Git
+RUN powershell "$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")" 
+
 # RUN .\printstuff.ps1
 # ENV chocolateyUseWindowsCompression false
 
