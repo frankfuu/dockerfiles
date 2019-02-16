@@ -14,4 +14,8 @@ try {
 # $env:chocolateyUseWindowsCompression = 'false'
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
+choco install git -y
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+
+# clean up
 [System.Net.ServicePointManager]::SecurityProtocol = $securityProtocolSettingsOriginal
