@@ -8,6 +8,7 @@ RUN powershell .\installchoco.ps1
 RUN choco feature enable -n allowGlobalConfirmation
 RUN choco install nodejs-lts
 RUN choco install yarn
+RUN choco install git
 
 # RUN .\printstuff.ps1
 # ENV chocolateyUseWindowsCompression false
@@ -32,3 +33,5 @@ RUN choco install yarn
 # https://www.google.com/search?q=cannot+resolve+chocolatey+windows+container&rlz=1C1CHBF_en-GBAU827AU827&oq=cannot+resolve+chocolatey+windows+container&aqs=chrome..69i57.4578j0j7&sourceid=chrome&ie=UTF-8
 # https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/set-up-windows-containers-with-powershell
 # https://stackoverflow.com/questions/51517280/running-chocolatey-in-docker-container-fails
+# https://forums.docker.com/t/cannot-ping-the-outside-world/61264/4
+# https://github.com/docker/for-win/issues/2760
