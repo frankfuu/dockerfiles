@@ -3,9 +3,7 @@ FROM microsoft/dotnet-framework:4.7.2-sdk-windowsservercore-ltsc2019
 ENV chocolateyUseWindowsCompression false
 
 RUN ping chocolatey.org
-# RUN powershell -Command \
-#     iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1')); \
-#     choco feature disable --name showDownloadProgress
+RUN powershell -Command iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # RUN choco feature enable -n allowGlobalConfirmation
 # RUN choco install nodejs-lts
