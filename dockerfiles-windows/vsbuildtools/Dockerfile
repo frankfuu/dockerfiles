@@ -10,6 +10,7 @@ RUN powershell .\installchoco.ps1
 RUN choco feature enable -n allowGlobalConfirmation
 RUN choco install nodejs-lts
 RUN choco install yarn
+RUN choco install netfx-4.7.1-devpack
 
 # RUN .\printstuff.ps1
 # ENV chocolateyUseWindowsCompression false
