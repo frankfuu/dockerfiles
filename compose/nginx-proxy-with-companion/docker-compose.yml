@@ -3,6 +3,7 @@ version: '2'
 services : 
 
   nginx-proxy:
+    restart: always
     image: jwilder/nginx-proxy
     ports:
       - "80:80"
@@ -14,6 +15,7 @@ services :
       - "/etc/nginx/certs:/etc/nginx/certs"
       - "./my_custom_proxy_settings.conf:/etc/nginx/conf.d/my_custom_proxy_settings.conf"
   letsencrypt-nginx-proxy-companion:
+    restart: always
     image: jrcs/letsencrypt-nginx-proxy-companion
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
