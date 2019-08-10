@@ -9,8 +9,13 @@ web:
     LETSENCRYPT_EMAIL: frankfu1122@gmail.com
     GITLAB_OMNIBUS_CONFIG: |
       external_url 'https://gitlab.frankfu.com.au'
+      letsencrypt['enable'] = false
       nginx['listen_port'] = 80
       nginx['listen_https'] = false
+      nginx['proxy_set_headers'] = {
+      "X-Forwarded-Proto" => "https",
+      "X-Forwarded-Ssl" => "on"
+      }
       # Add any other gitlab.rb configuration here, each on its own line
   ports:
     # - '80:80'
