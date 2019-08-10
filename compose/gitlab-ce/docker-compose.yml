@@ -3,13 +3,16 @@ web:
   restart: always
   hostname: 'gitlab.frankfu.com.au'
   environment:
+    VIRTUAL_HOST: gitlab.frankfu.com.au 
+    LETSENCRYPT_HOST: gitlab.frankfu.com.au
+    LETSENCRYPT_EMAIL: frankfu1122@gmail.com
     GITLAB_OMNIBUS_CONFIG: |
       external_url 'https://gitlab.frankfu.com.au'
       gitlab_rails['gitlab_shell_ssh_port'] = 2224
       # Add any other gitlab.rb configuration here, each on its own line
   ports:
-    - '80:80'
-    - '443:443'
+    # - '80:80'
+    # - '443:443'
     - '2224:22'
   volumes:
     - '/srv/gitlab/config:/etc/gitlab'
