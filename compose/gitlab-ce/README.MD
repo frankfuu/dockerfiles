@@ -1,1 +1,5 @@
+```
+docker-compose up -d
+```
+
 https://docs.gitlab.com/omnibus/docker/#install-gitlab-using-docker-compose
