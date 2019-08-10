@@ -25,3 +25,8 @@ web:
     - '/srv/gitlab/config:/etc/gitlab'
     - '/srv/gitlab/logs:/var/log/gitlab'
     - '/srv/gitlab/data:/var/opt/gitlab'
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
