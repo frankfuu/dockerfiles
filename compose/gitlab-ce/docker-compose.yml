@@ -10,6 +10,7 @@ services:
       VIRTUAL_PORT: 80
       LETSENCRYPT_HOST: gitlab.frankfu.com.au
       LETSENCRYPT_EMAIL: frankfu1122@gmail.com
+      GITLAB_SHELL_SSH_PORT: 3000
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'https://gitlab.frankfu.com.au'
         letsencrypt['enable'] = false
@@ -28,7 +29,7 @@ services:
       - '/srv/gitlab/config:/etc/gitlab'
       - '/srv/gitlab/logs:/var/log/gitlab'
       - '/srv/gitlab/data:/var/opt/gitlab'
-      
+
 networks:
   default:
     external:
