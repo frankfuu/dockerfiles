@@ -11,8 +11,6 @@ services:
       VIRTUAL_PORT: 8080
       LETSENCRYPT_HOST: jenkins.frankfu.com.au
       LETSENCRYPT_EMAIL: frankfu1122@gmail.com
-    ports:
-      # - "8080"
     volumes:
       - '~/data/jenkins_home:/var/jenkins_home'      
 networks:
