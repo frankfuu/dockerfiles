@@ -8,7 +8,7 @@ services:
     hostname: 'neo4j.frankfu.com.au'
     environment:
       VIRTUAL_HOST: neo4j.frankfu.com.au
-      VIRTUAL_PORT: 7474
+      VIRTUAL_PORT: 7473
       LETSENCRYPT_HOST: neo4j.frankfu.com.au
       LETSENCRYPT_EMAIL: frankfu1122@gmail.com
       NEO4J_AUTH: neo4j/test
@@ -18,6 +18,7 @@ services:
       - '~/data/neo4j/import:/var/lib/neo4j/import'      
       - '~/data/neo4j/plugins:/plugins'
     ports:
+      - "7473:7473"
       - "7474:7474"
       - "7687:7687"
 networks:
