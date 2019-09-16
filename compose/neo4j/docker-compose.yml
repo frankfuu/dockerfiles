@@ -8,10 +8,10 @@ services:
     hostname: 'neo4j.frankfu.com.au'
     environment:
       VIRTUAL_HOST: neo4j.frankfu.com.au
-      VIRTUAL_PORT: 7473
+      VIRTUAL_PORT: 7474
       LETSENCRYPT_HOST: neo4j.frankfu.com.au
       LETSENCRYPT_EMAIL: frankfu1122@gmail.com
-      NEO4J_AUTH: neo4j/test
+      NEO4J_AUTH: none
     volumes:
       - '~/data/neo4j/data:/data'      
       - '~/data/neo4j/logs:/logs'      
