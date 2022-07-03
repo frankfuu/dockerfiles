@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  web:
+    user: "${UID}:${GID}"
+    image: 'jenkins/jenkins:lts'
+    restart: always
+    hostname: 'jenkins-w16a-group1.frankfu.com.au'
+    environment:
+      VIRTUAL_HOST: jenkins-w16a-group1.frankfu.com.au
+      VIRTUAL_PORT: 8080
+      LETSENCRYPT_HOST: jenkins-w16a-group1.frankfu.com.au
+      LETSENCRYPT_EMAIL: frankfu1122@gmail.com
+    volumes:
+      - '~/uni-data/jenkins-w16a-group1/jenkins_home:/var/jenkins_home'      
+networks:
+  default:
+    external:
+      name: nginx-proxy

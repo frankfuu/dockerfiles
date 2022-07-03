@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  web:
+    user: "${UID}:${GID}"
+    image: 'jenkins/jenkins:lts-jdk11'
+    restart: always
+    hostname: 'jk.frankfu.com.au'
+    environment:
+      VIRTUAL_HOST: jk.frankfu.com.au
+      VIRTUAL_PORT: 8080
+      LETSENCRYPT_HOST: jk.frankfu.com.au
+      LETSENCRYPT_EMAIL: frankfu1122@gmail.com
+    volumes:
+      - 'jenkins_home_new:/var/jenkins_home'      
+volumes:
+  jenkins_home_new:
+networks:
+  default:
+    external:
+      name: nginx-proxy
