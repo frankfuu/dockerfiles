@@ -6,7 +6,7 @@ services:
     restart: always
     hostname: 'stash.frankfu.com.au'
     environment:
-      RETURN_LOCATION: 'return 301 https://www.investsmart.com.au/test/debug;'
+      RETURN_LOCATION: 'return 301 https://docs.google.com/forms/d/e/1FAIpQLScm_JUGpjSI2n8hWH7Rxz0FGLepXd9C-sKEmMHNW5tdA0WKvA/viewform?usp=sf_link;'
       VIRTUAL_HOST: pinkifrank.net
       VIRTUAL_PORT: 8080
       LETSENCRYPT_HOST: pinkifrank.net
