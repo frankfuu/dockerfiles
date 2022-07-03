@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  web:
+    image: 'caprover:latest'
+    restart: always
+    hostname: 'stash.frankfu.com.au'
+    environment:
+      RETURN_LOCATION: 'return 301 https://www.investsmart.com.au/test/debug;'
+      VIRTUAL_HOST: pinkifrank.net
+      VIRTUAL_PORT: 8080
+      LETSENCRYPT_HOST: pinkifrank.net
+      LETSENCRYPT_EMAIL: frankfu1122@gmail.com
+    volumes:
+      - .:/web
+networks:
+  default:
+    external:
+      name: nginx-proxy
