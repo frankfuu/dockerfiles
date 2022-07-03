@@ -2,7 +2,7 @@ version: '2'
 
 services:
   web:
-    image: 'caprover:latest'
+    image: 'caprover/nginx-redirect:latest'
     restart: always
     hostname: 'stash.frankfu.com.au'
     environment:
