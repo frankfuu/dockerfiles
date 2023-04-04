@@ -27,7 +27,7 @@ services:
       - DB_NAME=$MONGODB_DATABASE
       - DB_PORT=$MONGODB_DOCKER_PORT
       - VIRTUAL_HOST=nodemongo.frankfu.com.au
-      - VIRTUAL_PORT=6868
+      - VIRTUAL_PORT=8081
       - LETSENCRYPT_HOST=nodemongo.frankfu.com.au
       - LETSENCRYPT_EMAIL=frankfu1122@gmail.com
     stdin_open: true
